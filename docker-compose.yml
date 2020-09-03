@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+    bayesian-trial:
+        # build: 
+        #     context: .
+        #     dockerfile: Dockerfile
+        image: bayesian-cognitive-modeling:0.1
+        ports: # 公開用のポート, host:container
+            - "8000:8888"
+        container_name: bayesian-cog.1
+        volumes: # host:container
+            - $PWD:/workspace
+        command: jupyter lab --allow-root --no-browser --port 8888 --ip 0.0.0.0 --NotebookApp.token='pass'

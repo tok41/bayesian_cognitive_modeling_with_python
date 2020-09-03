@@ -1,0 +1,7 @@
+*.log
+*.out
+*.pyc
+
+archives/
+logs/
+.devcontainer/
